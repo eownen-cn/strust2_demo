@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.5//EN"
+    "http://struts.apache.org/dtds/struts-2.5.dtd">
+    
+<struts>
+	<constant name="struts.devMode" value="true"></constant>
+	<package name="myAction" namespace="/" extends="struts-default" >
+		<action name="index">
+			<result>/index.jsp</result>
+		</action>
+	
+		<action name="login4" method="login" class="org.denny.struts2.action.MyAction4">
+			<result name="login_success" type="redirect">/success.jsp</result>
+			<result name="mission_failed" type="redirect">/mission-failed.jsp</result>
+		</action>
+	
+		<action name="login3" method="login" class="org.denny.struts2.action.MyAction3">
+			<result name="login_success" type="redirect">/success.jsp</result>
+			<result name="mission_failed" type="redirect">/mission-failed.jsp</result>
+		</action>
+	
+		<action name="login2" method="login" class="org.denny.struts2.action.MyAction2">
+			<result name="login_success" type="redirect">/success.jsp</result>
+			<result name="mission_failed" type="redirect">/mission-failed.jsp</result>
+		</action>
+	
+		<action name="login" method="login" class="org.denny.struts2.action.MyAction">
+			<result name="login_success" type="redirect">/success.jsp</result>
+			<result name="mission_failed" type="redirect">/mission-failed.jsp</result>
+		</action>
+	</package>
+</struts>

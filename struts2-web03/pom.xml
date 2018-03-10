@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>org.denny.struts</groupId>
+	<artifactId>struts2-web03</artifactId>
+	<packaging>war</packaging>
+	<version>0.0.1-SNAPSHOT</version>
+	<name>struts2-web03 Maven Webapp</name>
+	<url>https://www.aliling.vip</url>
+	
+	<properties>
+		<project.build.globalEncoding>utf8</project.build.globalEncoding>
+	</properties>
+	
+	<contributors>
+		<contributor>
+			<name>apache</name>
+			<organization>Apache</organization>
+			<organizationUrl>http://maven.apache.org</organizationUrl>
+		</contributor>
+		<contributor>
+			<name>aliyun</name>
+			<organization>Alibaba organization</organization>
+			<organizationUrl>https://maven.aliyun.com</organizationUrl>
+		</contributor>
+		<contributor>
+			<name>eclipse</name>
+			<organization>Eclipse</organization>
+			<organizationUrl>http://www.eclipse.org</organizationUrl>
+		</contributor>
+	</contributors>
+	
+	<!-- 发行管理 -->
+	<issueManagement>
+		<system>
+			Windows
+		</system>
+	</issueManagement>
+	
+	<description>
+		Struts2 小案例
+		
+		1. 测试在Struts2的Action中访问JSP内置对象
+			一个Action实例中，获取以下三种常用JSP内置对象的方法有四种
+			这四种，各有其利弊，需要记住的是，好用的耦合性高，不太方便的却可以解耦和
+			以下是得到Servlet对象的关键类
+			
+			1).通过链式调用，后续对象依次赖前一个对象
+				ServletActionContext 可以得到 => [request|session|application] 高耦合
+				ActionContext 		   可以得到 => [request|session|application] 高耦合
+			
+			2).通过依赖注入，分别实现ReuqestAware,SessionAare,ApplicationAare，并实现其对应的set注入接口即可 中度耦合
+				HttpServletRequest 		request
+				HttpSession 			session 
+				ServletContext 			application
+			
+			3).通过继承自ActionSupport的内置对象ActionContext.getContext()获取Context上下文，
+				再通过这个Context对象依次获取request,session,application，并转为
+				<![CDATA[Map<String,Object>]]>形式的数据结构
+				Map request
+				Map	session
+				Map	application
+			
+		2. 测试Struts2中debug的使用，以及引出的OGNL表达式的用法
+		
+			<![CDATA[<%@ taglib uri="/struts-tags" prefix="s" %>]]>
+			使用如上jsp脚本，引入Struts2标签库
+			
+			<![CDATA[<s:debug />]]>
+			使用如上标签加载堆栈信息到前台页面以供调试
+			
+	</description>
+	
+	
+	
+	<developers>
+		<developer>
+			<id>1001</id>
+			<name>永凌</name>
+			<email>eownen@gmail.com</email>
+			<roles>
+				<role>president</role>
+			</roles>
+		</developer>
+		<developer>
+			<id>1002</id>
+			<name>丹尼</name>
+			<email>denny_loong@outlook.com</email>
+			<roles>
+				<role>engineer</role>
+			</roles>
+		</developer>
+	</developers>
+
+	<dependencies>
+		<dependency>
+			<groupId>org.apache.struts</groupId>
+			<artifactId>struts2-core</artifactId>
+			<version>2.5.14</version>
+		</dependency>
+		<dependency>
+			<groupId>javax.servlet</groupId>
+			<artifactId>javax.servlet-api</artifactId>
+			<version>3.0.1</version>
+			<scope>provided</scope>
+		</dependency>
+		<dependency>
+			<groupId>log4j</groupId>
+			<artifactId>log4j</artifactId>
+			<version>1.2.12</version>
+		</dependency>
+		<dependency>
+			<groupId>org.freemarker</groupId>
+			<artifactId>freemarker</artifactId>
+			<version>2.3.27-incubating</version>
+		</dependency>
+	</dependencies>
+	<build>
+		<finalName>struts2-web03</finalName>
+		
+		<plugins>
+
+			<!-- 设置编译环境编码 (Set the compiler scope encoding) -->
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>3.7.0</version>
+				<configuration>
+					<encoding>utf-8</encoding>
+					<source>1.8</source>
+					<target>1.8</target>
+				</configuration>
+			</plugin>
+
+			<!-- 设置打包后续操作 (Set the goal infomation after the package after) -->
+			<plugin>
+				<groupId>org.apache.tomcat.maven</groupId>
+				<artifactId>tomcat7-maven-plugin</artifactId>
+				<version>2.2</version>
+				<executions>
+					<execution>
+						<!-- 打包好后，执行该插件的run目标 (Running the goal of 'run' after the project 
+							packaged) -->
+						<phase>package</phase>
+						<goals>
+							<goal>run</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+
+			<!-- 设置项目生成网站的编码 (Set the encoding with project while it generation site) -->
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-site-plugin</artifactId>
+				<version>3.5.1</version>
+				<configuration>
+					<locales>zh_CN</locales>
+				</configuration>
+			</plugin>
+			
+			<plugin>
+				<groupId>org.apache.maven.scm</groupId>
+				<artifactId>maven-scm-api</artifactId>
+				<version>1.9.2</version>
+			</plugin>
+			<!-- 
+			<plugin>
+				<groupId>org.apache.maven.scm</groupId>
+				<artifactId>maven-scm-providers-git</artifactId>
+				<version>1.9.2</version>
+				<executions>
+					<execution>
+						<id>scm-git</id>
+						<phase>deploy</phase>
+						<configuration>
+							<basedir>target</basedir>
+							<includes>client/.jar,server/bps/.jar</includes>
+							<message>auto push the new server jars to git.</message>
+							<pushChanges>true</pushChanges>
+							<developerConnetionUrl>
+								scm:git:ssh://build@192.30.253.113/home/gitdata/code/BPS
+							</developerConnetionUrl>
+						</configuration>
+						<goals>
+							<goal>checkin</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+			 -->
+		</plugins>
+	</build>
+</project>

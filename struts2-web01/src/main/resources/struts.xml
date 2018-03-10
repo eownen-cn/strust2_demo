@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.5//EN"
+    "http://struts.apache.org/dtds/struts-2.5.dtd">
+    
+<struts>
+	<package name="myAction" namespace="/" extends="struts-default" >
+		<action name="login" method="login" class="org.denny.struts2.action.MyAction">
+			<result name="success">/success.jsp</result>
+			<result name="error">/failed.jsp</result>
+		</action>
+		<action name="register" method="register" class="org.denny.struts2.action.MyAction">
+			<result name="success">/success.jsp</result>
+			<result name="error">/failed.jsp</result>
+		</action>
+	</package>
+</struts>

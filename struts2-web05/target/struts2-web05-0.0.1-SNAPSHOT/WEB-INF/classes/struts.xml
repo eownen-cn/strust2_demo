@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.5//EN"
+    "http://struts.apache.org/dtds/struts-2.5.dtd">
+
+<struts>
+
+    <constant name="struts.devMode" value="true" />
+
+    <package name="basicstruts2" namespace="/" extends="struts-default">
+    	
+    	
+    
+        <action name="index">
+            <result>/index.jsp</result>
+        </action>
+    
+        <action name="index2" class="org.denny.struts.MyAction2">
+            <result name="success">/success.jsp</result>
+            <result name="error">/failed.jsp</result>
+            <result name="*" type="redirectAction">index</result>
+        </action>
+    
+        <action name="login" class="org.denny.struts.MyAction" method="login">
+            <result name="success">/login_success.jsp</result>
+            <result name="input">/index.jsp</result>
+        </action>
+    
+        <action name="register" class="org.denny.struts.MyAction" method="register">
+            <result name="success">/register_success.jsp</result>
+            <result name="input">/index.jsp</result>
+        </action>
+        
+        <action name="" >
+    		<result>/404.jsp</result>
+    	</action>
+    </package>
+
+</struts>

@@ -1,0 +1,6 @@
+0:0:0:0:0:0:0:1 - - [09/Mar/2018:02:47:15 +0800] "GET / HTTP/1.1" 404 - http-bio-8080-exec-1 0
+0:0:0:0:0:0:0:1 - - [09/Mar/2018:02:47:23 +0800] "GET /struts2-web01 HTTP/1.1" 302 - http-bio-8080-exec-4 0
+0:0:0:0:0:0:0:1 - - [09/Mar/2018:02:47:24 +0800] "GET /struts2-web01/ HTTP/1.1" 200 353 http-bio-8080-exec-5 1469
+0:0:0:0:0:0:0:1 - - [09/Mar/2018:02:47:24 +0800] "GET /favicon.ico HTTP/1.1" 404 - http-bio-8080-exec-6 0
+0:0:0:0:0:0:0:1 - - [09/Mar/2018:02:47:28 +0800] "GET /struts2-web01/login HTTP/1.1" 200 272 http-bio-8080-exec-7 158
+0:0:0:0:0:0:0:1 - - [09/Mar/2018:02:47:30 +0800] "GET /struts2-web01/register HTTP/1.1" 200 272 http-bio-8080-exec-8 14
