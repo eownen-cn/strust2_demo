@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+
+	<modelVersion>4.0.0</modelVersion>
+
+	<groupId>org.denny.struts</groupId>
+	<artifactId>struts2-web06</artifactId>
+	<packaging>war</packaging>
+	<version>0.0.1-SNAPSHOT</version>
+
+	<name>struts2-web06 Maven Webapp</name>
+	<url>https://git@github.com/eownen-cn/struts2-web06</url>
+
+	<properties>
+		<project.buildName>struts2-web06</project.buildName>
+		<project.build.sourceEncoding>utf-8</project.build.sourceEncoding>
+	</properties>
+
+	<build>
+
+		<plugins>
+
+			<!-- 设置编译环境编码 (Set the compiler scope encoding) -->
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>3.7.0</version>
+				<configuration>
+					<encoding>utf-8</encoding>
+					<source>1.8</source>
+					<target>1.8</target>
+				</configuration>
+			</plugin>
+
+			<!-- 设置打包后续操作 (Set the goal infomation after the package after) -->
+			<!-- tomcat7 maven插件 -->
+
+			<plugin>
+				<groupId>org.apache.tomcat.maven</groupId>
+				<artifactId>tomcat7-maven-plugin</artifactId>
+				<version>2.2</version>
+				<executions>
+					<execution>
+						<!-- 打包好后，执行该插件的run目标 (Running the goal of 'run' after the project 
+							packaged) -->
+						<phase>package</phase>
+						<goals>
+							<goal>run</goal>
+						</goals>
+					</execution>
+				</executions>
+				<configuration>
+					<uriEncoding>UTF-8</uriEncoding>
+				</configuration>
+			</plugin>
+
+
+			<!-- jetty 服务器插件，和以上插件可以互换 <plugin> <groupId>org.eclipse.jetty</groupId> 
+				<artifactId>jetty-maven-plugin</artifactId> <version>9.4.7.v20170914</version> 
+				<executions> <execution> <phase>verify</phase> <goals> <goal>run</goal> </goals> 
+				</execution> </executions> </plugin> -->
+			<!-- 设置项目生成网站的编码 (Set the encoding with project while it generation site) -->
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-site-plugin</artifactId>
+				<version>3.5.1</version>
+				<configuration>
+					<locales>zh_CN</locales>
+				</configuration>
+			</plugin>
+		</plugins>
+
+
+	</build>
+
+	<dependencies>
+		<dependency>
+			<groupId>org.apache.struts</groupId>
+			<artifactId>struts2-core</artifactId>
+			<version>2.5.14</version>
+		</dependency>
+		<dependency>
+			<groupId>javax.servlet</groupId>
+			<artifactId>jsp-api</artifactId>
+			<version>2.0</version>
+			<type>jar</type>
+			<optional>false</optional>
+			<scope>provided</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.freemarker</groupId>
+			<artifactId>freemarker</artifactId>
+			<version>2.3.27-incubating</version>
+		</dependency>
+		<dependency>
+			<groupId>log4j</groupId>
+			<artifactId>log4j</artifactId>
+			<version>2.10.0</version>
+			<type>pom.lastUpdated</type>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.taglibs</groupId>
+			<artifactId>taglibs-standard-jstlel</artifactId>
+			<version>1.2.5</version>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.struts</groupId>
+			<artifactId>struts2-json-plugin</artifactId>
+			<version>2.5.14</version>
+		</dependency>
+		<dependency>
+			<groupId>com.jayway.jsonpath</groupId>
+			<artifactId>json-path</artifactId>
+			<version>2.2.0</version>
+		</dependency>
+		<dependency>
+			<groupId>org.junit</groupId>
+			<artifactId>com.springsource.org.junit</artifactId>
+			<version>4.7.0</version>
+		</dependency>
+	</dependencies>
+</project>

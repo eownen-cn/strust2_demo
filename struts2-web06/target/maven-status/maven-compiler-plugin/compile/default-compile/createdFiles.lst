@@ -1,0 +1,5 @@
+org\denny\struts\action\UseTag.class
+org\denny\struts\action\JSONProcessAction.class
+org\denny\struts\action\OGNLTestAction.class
+org\denny\struts\ognl\OGNLReferences.class
+org\denny\struts\vo\User.class

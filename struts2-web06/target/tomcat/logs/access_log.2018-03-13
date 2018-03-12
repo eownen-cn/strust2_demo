@@ -1,0 +1,13 @@
+127.0.0.1 - - [13/Mar/2018:04:39:23 +0800] "GET /struts2-web06/tag/index HTTP/1.1" 200 2856 http-bio-8080-exec-1 3351
+127.0.0.1 - - [13/Mar/2018:04:39:25 +0800] "GET /struts2-web06/tag/url_test_page?p=hello&pp=world%21 HTTP/1.1" 200 471771 http-bio-8080-exec-3 696
+127.0.0.1 - - [13/Mar/2018:04:39:28 +0800] "GET /struts2-web06/tag/url_test_page?p=%E4%B8%96%E7%95%8C&pp=%E4%BD%A0%E5%A5%BD%EF%BC%81 HTTP/1.1" 200 471843 http-bio-8080-exec-4 120
+127.0.0.1 - - [13/Mar/2018:04:39:31 +0800] "GET /struts2-web06/tag/url_test_page HTTP/1.1" 200 471332 http-bio-8080-exec-5 45
+127.0.0.1 - - [13/Mar/2018:04:39:33 +0800] "GET /struts2-web06/tag/url_test_page?p=hello&pp=world%21 HTTP/1.1" 200 471768 http-bio-8080-exec-6 63
+127.0.0.1 - - [13/Mar/2018:04:40:55 +0800] "GET /struts2-web06/tag/index HTTP/1.1" 200 2856 http-bio-8080-exec-10 60
+127.0.0.1 - - [13/Mar/2018:04:41:03 +0800] "GET /struts2-web06/tag/url_test_page?p=%E4%B8%96%E7%95%8C&pp=%E4%BD%A0%E5%A5%BD%EF%BC%81 HTTP/1.1" 200 471861 http-bio-8080-exec-10 328
+127.0.0.1 - - [13/Mar/2018:04:41:13 +0800] "GET /struts2-web06/tag/url_test_page?p=%E4%B8%96%E7%95%8C&pp=%E4%BD%A0%E5%A5%BD%EF%BC%81 HTTP/1.1" 200 471868 http-bio-8080-exec-10 48
+127.0.0.1 - - [13/Mar/2018:04:41:15 +0800] "GET /struts2-web06/tag/url_test_page?p=hello&pp=world%21 HTTP/1.1" 200 471789 http-bio-8080-exec-10 51
+127.0.0.1 - - [13/Mar/2018:04:41:18 +0800] "GET /struts2-web06/tag/url_test_page?p=%E4%B8%96%E7%95%8C&pp=%E4%BD%A0%E5%A5%BD%EF%BC%81 HTTP/1.1" 200 471862 http-bio-8080-exec-10 48
+127.0.0.1 - - [13/Mar/2018:04:57:30 +0800] "GET /struts2-web06/tag/getJsonData HTTP/1.1" 200 36 http-bio-8080-exec-8 29
+127.0.0.1 - - [13/Mar/2018:04:57:36 +0800] "GET /struts2-web06/tag/getByAction!ac.action HTTP/1.1" 200 42 http-bio-8080-exec-8 25
+127.0.0.1 - - [13/Mar/2018:04:57:41 +0800] "GET /struts2-web06/tag/bringParamToBack!b_ac.action?p1=hello&p2=world HTTP/1.1" 200 69 http-bio-8080-exec-8 32

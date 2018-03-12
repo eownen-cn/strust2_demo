@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.5//EN"
+    "http://struts.apache.org/dtds/struts-2.5.dtd">
+
+<struts>
+
+	
+
+	<!-- 设置国际化语言文件资源包 -->
+    <constant name="struts.custom.i18n.resources" value="i18n" />
+
+	<!-- 是否在Action的name属性上应用斜杠语法：关闭状态  。 提示：默认为false,如果使用通配符匹配Action的name,建议开启 -->
+    <constant name="struts.enable.SlashesInActionNames" value="false" />
+
+	<!-- 指定页面的OGNL支持：开启状态  。 提示：如果想要使用其它框架的标签库，该值应该为false,默认为true -->
+    <constant name="struts.ognl.enableExpressionCache" value="true" />
+
+	<!-- 指定开发模式为：开启状态 -->
+    <constant name="struts.devMode" value="true" />
+    
+    <!-- 设置默认主题为无样式：simple -->
+    <constant name="struts.ui.theme" value="simple" />
+    
+    <!-- 静态属性和方法的访问权：开启 -->
+    <constant name="struts.ognl.allowStaticMethodAccess" value="true" />
+    
+    <!-- Action动态请求方法：开启 -->
+    <constant name="struts.enable.DynamicMethodInvocation" value="true" />
+	
+	<!-- Struts数据结构测试，及参数自动化转型处理与传递机制 -->
+    <package name="basic" namespace="/" extends="struts-default,json-default">
+    	<!-- OGNL 测试用例Action . -->
+    	<action name="index" class="org.denny.struts.action.OGNLTestAction">
+    		<result>
+    			/index.jsp
+    		</result>
+    	</action>
+    	
+    	<!-- 处理Ajax业务的Action . -->
+    	<action name="ajax" class="org.denny.struts.action.JSONProcessAction" method="responseAjax">
+    		<result type="json" />
+    	</action>
+    </package>
+    <!-- Struts2常用标签测试 -->
+    <package name="tag_test" namespace="/tag" extends="basic">
+    	
+    	<default-class-ref class="org.denny.struts.action.UseTag"></default-class-ref>
+    	<action name="index"><result>/tag_test.jsp</result></action>
+    	<action name="getJsonData" method="data"><result type="json" /></action>
+    	<action name="getByAction" method="ac"><result type="json" /></action>
+    	<action name="bringParamToBack" method="b_ac"><result type="json" /></action>
+    	<action name="i"><result>/i18n_test.jsp</result></action>
+    	<action name="url_test_page"><result>/url_test_page.jsp</result></action>
+    	
+    </package>
+    
+</struts>
