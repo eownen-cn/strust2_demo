@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuite tests="5" failures="0" name="org.denny.struts.dao.impl.UserDaoImplTest" time="0.599" errors="0" skipped="0">
+  <properties>
+    <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
+    <property name="sun.boot.library.path" value="F:\program\java\jre\bin"/>
+    <property name="java.vm.version" value="25.151-b12"/>
+    <property name="java.vm.vendor" value="Oracle Corporation"/>
+    <property name="maven.multiModuleProjectDirectory" value="F:\my_app_root\struts2-web08"/>
+    <property name="java.vendor.url" value="http://java.oracle.com/"/>
+    <property name="path.separator" value=";"/>
+    <property name="guice.disable.misplaced.annotation.check" value="true"/>
+    <property name="java.vm.name" value="Java HotSpot(TM) 64-Bit Server VM"/>
+    <property name="file.encoding.pkg" value="sun.io"/>
+    <property name="user.script" value=""/>
+    <property name="user.country" value="CN"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="sun.os.patch.level" value=""/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="user.dir" value="F:\my_app_root\struts2-web08"/>
+    <property name="java.runtime.version" value="1.8.0_151-b12"/>
+    <property name="java.awt.graphicsenv" value="sun.awt.Win32GraphicsEnvironment"/>
+    <property name="java.endorsed.dirs" value="F:\program\java\jre\lib\endorsed"/>
+    <property name="os.arch" value="amd64"/>
+    <property name="java.io.tmpdir" value="C:\Users\ADMINI~1\AppData\Local\Temp\"/>
+    <property name="line.separator" value="
+"/>
+    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+    <property name="user.variant" value=""/>
+    <property name="os.name" value="Windows 10"/>
+    <property name="classworlds.conf" value="F:\my_app_root\.metadata\.plugins\org.eclipse.m2e.launching\launches\m2conf3122406048215736129.tmp"/>
+    <property name="sun.jnu.encoding" value="GBK"/>
+    <property name="java.library.path" value="F:\program\java\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;F:/program/java/bin/../jre/bin/server;F:/program/java/bin/../jre/bin;F:/program/java/bin/../jre/lib/amd64;F:\program\java\bin;C:\ProgramData\Oracle\Java\javapath;F:\program\orcl\product\11.2.0\dbhome_1\bin;F:\program\orcl\product\12.2.0\dbhome_1\bin;F:\program\oracle\product\12.2.0\dbhome_1\bin;C:\Program Files\Microsoft MPI\Bin\;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;F:\program\aliww;F:\program\BaiduNetdisk;F:\program\FileZilla FTP Client;F:\program\firefox;F:\program\IntelliJ IDEA 2016.3.4\bin;F:\program\KGMusic;F:\program\KMPlayerPortable;F:\program\ludashi;F:\program\markdown;F:\program\Microsoft VS Code;F:\program\qq\Bin;F:\program\QQLive;F:\program\Ruby24-x64\bin;F:\program\SQLyog10.2;F:\program\wamp;C:\Program Files (x86)\Google\Chrome\Application;C:\Program Files (x86)\Internet Explorer;C:\Program Files (x86)\Windows Media Player;F:\program\KGMusic;C:\Program Files (x86)\Kingsoft\TypeEasy\TypeGame\Police;C:\Users\Administrator\AppData\Roaming\Typeeasy;I:\TheClassic\OneDrive\Download\mysql-5.7.20-winx64-debug-test\mysql-5.7.20-winx64\bin;C:\Program Files\MySQL\MySQL Utilities 1.6\;F:\program\MSSERVER\Microsoft SQL Server X86\140\Tools\Binn\;F:\program\MSSERVER\Microsoft SQL Server\140\Tools\Binn\;F:\program\MSSERVER\Microsoft SQL Server X86\140\DTS\Binn\;F:\program\MSSERVER\Microsoft SQL Server\140\DTS\Binn\;F:\program\MSSERVER\Microsoft SQL Server\Client SDK\ODBC\130\Tools\Binn\;C:\Program Files\MySQL\MySQL Server 8.0\bin;F:\program\Sublime Text 3;F:\program\thurder\Program;F:\program\Tomcat8\bin;F:\program\YoukuClient;F:\program\Navicat Premium 12;C:\Program Files (x86)\Tencent\WeChat;C:\Program Files (x86)\Alibaba\wwbizsrv;F:\program\apache-maven-3.5.2\bin;F:\program\PLSQL;F:\program\eclipse;F:\program\Dict;F:\program\qidian\Accelerator;F:\program\TGit\bin;F:\program\Git\cmd;F:\program\360AP;F:\program\Bandicam;F:\program\mysql-5.7.21-winx64\bin;F:\program\YouKu\YoukuClient;F:\program\Lingoes\Translator2;C:\Users\Administrator\AppData\Local\Microsoft\WindowsApps;;C:\Program Files\Microsoft VS Code\bin;C:\Users\Administrator;;."/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="java.class.version" value="52.0"/>
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+    <property name="os.version" value="10.0"/>
+    <property name="user.home" value="C:\Users\Administrator"/>
+    <property name="user.timezone" value="Asia/Shanghai"/>
+    <property name="java.awt.printerjob" value="sun.awt.windows.WPrinterJob"/>
+    <property name="java.specification.version" value="1.8"/>
+    <property name="file.encoding" value="GBK"/>
+    <property name="user.name" value="Ewonen-PC"/>
+    <property name="java.class.path" value="F:\program\apache-maven-3.5.2\boot\plexus-classworlds-2.5.2.jar"/>
+    <property name="java.vm.specification.version" value="1.8"/>
+    <property name="sun.arch.data.model" value="64"/>
+    <property name="java.home" value="F:\program\java\jre"/>
+    <property name="sun.java.command" value="org.codehaus.plexus.classworlds.launcher.Launcher -B -gs D:\.m2\repository\settings.xml -s D:\.m2\repository\settings.xml package"/>
+    <property name="java.specification.vendor" value="Oracle Corporation"/>
+    <property name="user.language" value="zh"/>
+    <property name="awt.toolkit" value="sun.awt.windows.WToolkit"/>
+    <property name="java.vm.info" value="mixed mode"/>
+    <property name="java.version" value="1.8.0_151"/>
+    <property name="java.ext.dirs" value="F:\program\java\jre\lib\ext;C:\Windows\Sun\Java\lib\ext"/>
+    <property name="sun.boot.class.path" value="F:\program\java\jre\lib\resources.jar;F:\program\java\jre\lib\rt.jar;F:\program\java\jre\lib\sunrsasign.jar;F:\program\java\jre\lib\jsse.jar;F:\program\java\jre\lib\jce.jar;F:\program\java\jre\lib\charsets.jar;F:\program\java\jre\lib\jfr.jar;F:\program\java\jre\classes"/>
+    <property name="java.vendor" value="Oracle Corporation"/>
+    <property name="maven.home" value="F:\program\apache-maven-3.5.2"/>
+    <property name="file.separator" value="\"/>
+    <property name="java.vendor.url.bug" value="http://bugreport.sun.com/bugreport/"/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
+    <property name="sun.desktop" value="windows"/>
+    <property name="sun.cpu.isalist" value="amd64"/>
+  </properties>
+  <testcase classname="org.denny.struts.dao.impl.UserDaoImplTest" name="org.denny.struts.dao.impl.UserDaoImplTest.testAdd" time="0.564"/>
+  <testcase classname="org.denny.struts.dao.impl.UserDaoImplTest" name="org.denny.struts.dao.impl.UserDaoImplTest.testDelete" time="0.004"/>
+  <testcase classname="org.denny.struts.dao.impl.UserDaoImplTest" name="org.denny.struts.dao.impl.UserDaoImplTest.testUpdate" time="0.021"/>
+  <testcase classname="org.denny.struts.dao.impl.UserDaoImplTest" name="org.denny.struts.dao.impl.UserDaoImplTest.testGetList" time="0.002"/>
+  <testcase classname="org.denny.struts.dao.impl.UserDaoImplTest" name="org.denny.struts.dao.impl.UserDaoImplTest.testGetById" time="0.008"/>
+</testsuite>

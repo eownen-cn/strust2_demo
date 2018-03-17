@@ -1,0 +1,28 @@
+@charset "UTF-8";
+*{
+	margin:0;
+	padding:0;
+	list-style:none ;
+	text-decoration:none ;
+	outline:none;
+}
+body{
+	color:white ;
+	background-color:black ;
+	font-size:50px;
+}
+.div{
+	position:absolute ;
+	top:0;
+	right:0;
+	bottom:0;
+	left:0;
+	margin:auto ;
+	text-align:center;
+	width:800px;
+	height:200px ;
+	line-height:200px;
+	border:2px solid coral ;
+	box-shadow:2px 2px 6px 2px coral;
+	border-radius:25px;
+}

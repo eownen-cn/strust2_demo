@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.5//EN"
+    "http://struts.apache.org/dtds/struts-2.5.dtd">
+
+<struts>
+	<!-- 开启开发模式 -->
+	<constant name="struts.devMode" value="true" />
+	<!-- 开启动态方法调用 -->
+	<constant name="struts.enable.DynamicMethodInvocation" value="true" />
+	<!-- 去除.action后缀 -->
+	<constant name="struts.action.extension" value=',' /> 
+	<package name="basic" extends="json-default" namespace="/user">
+		<!-- 默认Action -->
+		<default-action-ref name="index" />
+		<!-- 默认class -->
+		<default-class-ref  class="org.denny.struts.action.UserAction" />
+		<!-- 共享返回 -->
+		<global-results><result type="json" /></global-results>
+		<!-- 获取User列表 -->
+		<action name="list" method="list">
+			<result>/list.jsp</result>
+		</action>
+		<!-- 删除一个User -->
+		<action name="del" method="del" />
+		<!-- 更新User -->
+		<action name="edit" method="edit" />
+		<!-- 默认index指向 -->
+		<action name="index">
+			<result type="redirectAction">list</result>
+		</action>
+		<!-- 如果前面的没有被精确匹配，这里的作用是：指定user命名空间下，任何Action同一跳转的Action -->
+		<action name="*">
+			<result type="redirectAction">index</result>
+		</action>
+	</package>
+</struts>

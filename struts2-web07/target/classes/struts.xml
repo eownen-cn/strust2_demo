@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.5//EN"
+    "http://struts.apache.org/dtds/struts-2.5.dtd">
+
+<struts>
+
+	<constant name="struts.devMode" value="true"></constant>
+	<constant name="struts.enable.DynamicMethodInvocation" value="true"></constant>
+
+	<package name="public" extends="json-default" namespace="/free">
+		<action name="index">
+			<result>/index.jsp</result>
+		</action>
+		<action name="f">
+			<result type="freemarker">/ftl/index.ftl</result>
+		</action>
+		<action name="ra">
+			<result type="redirectAction">beaction</result>
+		</action>
+		<action name="beaction" class="org.denny.struts.action.TestAction">
+			<result name="new_target">/html/new_target.jsp</result>
+		</action>
+
+		<action name="hh" class="org.denny.struts.action.TestAction" method="hh">
+			<result name="success" type="httpheader">
+				<param name="status">204</param>
+				<param name="headers.a">a custom header value</param>
+				<param name="headers.b">another custom header value</param>
+			</result>
+	
+			<result name="proxyRequired" type="httpheader">
+				<param name="error">305</param>
+				<param name="errorMessage">this action must be accessed through a proxy</param>
+			</result>
+		</action>	
+
+	</package>
+
+</struts>

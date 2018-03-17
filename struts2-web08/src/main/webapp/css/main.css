@@ -1,0 +1,16 @@
+@charset "UTF-8";
+*{margin:0;padding:0;list-style:none ;text-decoration:none ;outline:none ;}
+body,html{width:100%;}
+body{background:black;color:coral ;font:600 14px/28px 'Microsoft Yahei',sans-serif;}
+ul{color:eee;width:800px;border:5px solid #222 ;border-radius:15px;box-shadow:2px 2px 8px 2px lightblue;position:fixed;top:20%;right:0;left:0;margin:auto;}
+ul li{display:block;width:inherit;margin:0;text-align:left;}
+ul li:not(:nth-child(odd)){color:lightblue;}
+.list_title{background:#666;border-radius:12px;display:block;height:100%;height:50px;line-height:50px;color:gold;}
+.c{text-align:center;}
+.item{display:inline-block;width:19%;text-align:left;font-size:16px;line-height:16px;}
+body .debug{width:100%;height:50px;line-height:50px;color:red;}
+.red{color:red;}
+.white{color:white;}
+input:enabled{border:0;backgournd-color:#000;color:coral;width:100%;height:100%;}
+.ctrls{margin-left:20px;}
+a{cursor:pointer;}

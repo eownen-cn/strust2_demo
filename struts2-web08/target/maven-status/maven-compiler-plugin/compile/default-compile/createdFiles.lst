@@ -1,0 +1,6 @@
+org\denny\struts\bean\User.class
+org\denny\struts\action\UserAction.class
+org\denny\struts\dao\impl\UserDaoImpl.class
+org\denny\struts\dbutil\DB.class
+org\denny\struts\dao\UserDao.class
+org\denny\struts\util\JSONSupport.class
