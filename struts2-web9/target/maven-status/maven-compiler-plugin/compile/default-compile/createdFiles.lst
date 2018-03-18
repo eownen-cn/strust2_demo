@@ -1,0 +1,12 @@
+com\example\struts\user\catalog\Index.class
+com\example\struts\user\catalog\copy\Index.class
+com\example\struts\user\IndexAction.class
+com\example\struts\user\catalog\copy\IndexAction.class
+com\example\struts\user\catalog\IndexAction.class
+com\example\actions\IndexAction.class
+com\example\actions\catalog\Hello.class
+com\example\actions\HelloWorldAction.class
+com\example\actions\Index.class
+com\example\actions\HelloAction.class
+com\example\struts\user\Index.class
+com\example\actions\catalog\copy\Hello.class

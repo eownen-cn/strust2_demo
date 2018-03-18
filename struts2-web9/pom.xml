@@ -1,0 +1,52 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>com.example.actions</groupId>
+	<artifactId>struts2-web9</artifactId>
+	<packaging>war</packaging>
+	<version>0.0.1-SNAPSHOT</version>
+	<name>struts2-web9 Maven Webapp</name>
+	<url>http://maven.apache.org</url>
+	
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+	</properties>
+	
+	<dependencies>
+		<!-- https://mvnrepository.com/artifact/org.apache.struts/struts2-convention-plugin -->
+		<dependency>
+			<groupId>org.apache.struts</groupId>
+			<artifactId>struts2-convention-plugin</artifactId>
+			<version>2.5.14</version>
+		</dependency>
+		
+	</dependencies>
+	<build>
+		<finalName>struts2-web9</finalName>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.tomcat.maven</groupId>
+				<artifactId>tomcat7-maven-plugin</artifactId>
+				<configuration>
+					<useTestClasspath>false</useTestClasspath>
+					<charset>UTF-8</charset>
+					<uriEncoding>UTF-8</uriEncoding>
+					<clientAuth>Ewonen</clientAuth>
+					<finalName>struts2-web9</finalName>
+					<port>9999</port>
+				</configuration>
+				<version>2.2</version>
+				<executions>
+					<execution>
+						<phase>package</phase>
+						<goals>
+							<goal>run</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+		</plugins>
+
+
+	</build>
+</project>
