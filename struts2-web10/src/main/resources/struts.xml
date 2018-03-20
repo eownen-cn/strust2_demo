@@ -3,10 +3,20 @@
     "-//Apache Software Foundation//DTD Struts Configuration 2.5//EN"
     "http://struts.apache.org/dtds/struts-2.5.dtd">
 <struts>
+	<!-- 设置以什么后缀命名的类名为可用Action -->
 	<constant name="struts.convention.action.suffix" value="Action"/>
+	<!-- 开启Struts2注解扫描的匹配模式 -->
 	<constant name="struts.convention.action.mapAllMatches" value="true"/>
+	<!-- 设置Struts2运行环境的字符编码 -->
 	<constant name="struts.i18n.encoding" value="utf8"/>
+	<!-- 设置struts.xml的上限父包 -->
 	<constant name="struts.convention.default.parent.package" value="json-default"/>
+	<!-- 开启调试模式 -->
 	<constant name="struts.devMode" value="true"/>
+	<!-- 开启动态类加载模式 -->
+	<constant name="struts.convention.classes.reload" value="true" />
+	<!-- 开启动态方法调用 -->
 	<constant name="struts.enable.DynamicMethodInvocation" value="true"/>
+	<!-- 定义全局视图模板存放位置 -->
+	<constant name="struts.convention.result.path" value="/view"/>
 </struts>

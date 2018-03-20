@@ -13,7 +13,7 @@ import org.apache.struts2.convention.annotation.Actions;
 import org.apache.struts2.convention.annotation.Namespace;
 import org.apache.struts2.interceptor.ServletResponseAware;
 
-import com.example.bean.Fruit;
+import com.example.struts.bean.Fruit;
 import com.opensymphony.xwork2.ActionSupport;
 
 import net.sf.json.JSONObject;
